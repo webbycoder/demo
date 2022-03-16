@@ -137,4 +137,8 @@ html {
 .navbar .socialIcon .fa-twitter:hover {
   color: #a9d0e5;
 }
+
+section .carousel-inner img {
+  height: 90vh;
+}
 /*# sourceMappingURL=main.css.map */
