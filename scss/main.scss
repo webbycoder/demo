@@ -104,20 +104,13 @@ html {
 }
 // navigation finished
 // slider start
-.slider {
-    .carousel-inner {
-        #img {
-            height: 100vh;
-        }
-    }
+
+#img {
+    height: 100vh;
 }
 @media screen and (max-width: 360px) {
-    .slider {
-        .carousel-inner {
-            #img {
-                height: 60vh;
-            }
-        }
+    #img {
+        height: 60vh;
     }
 }
 
