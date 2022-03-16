@@ -24,57 +24,57 @@ html {
 
 .navbar ul li a {
   position: relative;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .navbar ul li a:hover {
   -webkit-transform: scale(0.91);
           transform: scale(0.91);
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .navbar ul li a::after {
   content: "";
   width: 0;
-  height: .3rem;
+  height: 0.3rem;
   position: absolute;
   bottom: 0;
   left: 0;
   background-color: #621ffd;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .navbar ul li .act::before {
   content: "";
   width: 100%;
-  height: .05rem;
+  height: 0.05rem;
   position: absolute;
   top: 0;
   left: 0;
   background-color: #fff;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .navbar ul li .act::after {
   content: "";
   width: 100%;
-  height: .05rem;
+  height: 0.05rem;
   position: absolute;
   bottom: 0;
   left: 0;
   background-color: #fff;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .navbar ul li a:hover::after {
   width: 100%;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .navbar .socialIcon {
@@ -88,15 +88,15 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: all .7s ease;
-  transition: all .7s ease;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
 }
 
 .navbar .socialIcon i:hover {
-  -webkit-box-shadow: 0 0 1rem .2rem #dfe1eb inset;
-          box-shadow: 0 0 1rem .2rem #dfe1eb inset;
-  -webkit-transition: all .7s ease;
-  transition: all .7s ease;
+  -webkit-box-shadow: 0 0 1rem 0.2rem #dfe1eb inset;
+          box-shadow: 0 0 1rem 0.2rem #dfe1eb inset;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
   border: none;
 }
 
@@ -105,7 +105,7 @@ html {
   height: 4rem;
   border: 0.01rem solid white;
   border-radius: 50%;
-  margin: .3rem;
+  margin: 0.3rem;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -138,13 +138,13 @@ html {
   color: #a9d0e5;
 }
 
-section .carousel-inner img {
+.slider .carousel-inner #img {
   height: 100vh;
 }
 
 @media screen and (max-width: 360px) {
-  section .carousel-inner #img {
-    height: 60vh !important;
+  .slider .carousel-inner #img {
+    height: 60vh;
   }
 }
 /*# sourceMappingURL=main.css.map */
