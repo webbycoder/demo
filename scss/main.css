@@ -142,9 +142,9 @@ section .carousel-inner img {
   height: 100vh;
 }
 
-@media screen and (max-with: 330px) {
-  section .carousel-inner img {
-    height: 50vh !important;
+@media screen and (max-width: 360px) {
+  section .carousel-inner #img {
+    height: 60vh !important;
   }
 }
 /*# sourceMappingURL=main.css.map */
