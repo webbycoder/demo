@@ -113,4 +113,14 @@ section{
         }
     }
 }
+@media screen and (max-with: 330px){
+    section{
+        .carousel-inner{
+            img{
+                height: 50vh !important;
+            }
+        }
+    }
+}
+
 // slider finished
