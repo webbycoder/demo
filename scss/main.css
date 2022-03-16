@@ -139,10 +139,10 @@ html {
 }
 
 #img {
-  height: 100vh;
+  height: 90vh;
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 420px) {
   #img {
     height: 60vh;
   }
