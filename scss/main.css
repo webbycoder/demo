@@ -6,7 +6,7 @@
 }
 
 html {
-  font-size: 10px;
+  font-size: 62.5%;
 }
 
 .outer {
@@ -142,9 +142,58 @@ html {
   height: 90vh;
 }
 
-@media screen and (max-width: 420px) {
-  #img {
-    height: 60vh;
+.homeAbout {
+  background: #161aeb url("../img/ABOUT-US-BG.jpg");
+  min-height: 50rem;
+  position: relative;
+}
+
+.homeAbout .imgbox {
+  height: 100%;
+  width: 50vw;
+}
+
+.homeAbout img {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.homeAbout .home-about-text {
+  margin: 1rem auto;
+  position: absolute;
+  top: 5rem;
+  right: 2rem;
+  height: 100%;
+}
+
+.homeAbout .home-about-text h2 {
+  color: white;
+  font-size: 4rem;
+  font-weight: bolder;
+}
+
+.homeAbout .home-about-text p {
+  text-align: justify;
+  color: white;
+  font-size: 2rem;
+}
+
+@media (max-width: 520px) {
+  .homeAbout {
+    display: block;
+  }
+  .homeAbout img {
+    display: block;
+    width: 90%;
+  }
+  .home-about-text {
+    padding: .5rem 1rem;
+    display: block;
+    top: .5rem;
+    width: 90%;
   }
 }
 /*# sourceMappingURL=main.css.map */
