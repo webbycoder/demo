@@ -14,7 +14,7 @@ html {
   -webkit-box-shadow: 0 0 1.8rem 0.2rem #120f22b7;
           box-shadow: 0 0 1.8rem 0.2rem #120f22b7;
   background-color: aquamarine;
-  height: 1000px;
+  min-height: 1000px;
 }
 
 .navbar {
