@@ -13,15 +13,21 @@ html {
   margin: 0 10px;
   -webkit-box-shadow: 0 0 1.8rem 0.2rem #120f22b7;
           box-shadow: 0 0 1.8rem 0.2rem #120f22b7;
-  background-color: aquamarine;
-  min-height: 1000px;
+  /* background-color: aquamarine; */
+  min-height: 2000px;
 }
 
-.navbar {
-  background-color: #120f2200;
+nav{
+  /* background-color: #120f2200; */
+  background-color: #120f227c;
   font-size: 1.8rem;
+  margin: 0 10px;
 }
-
+/* nav::after{
+  content: '';
+  display: table;
+  clear: both;
+} */
 .navbar ul li a {
   position: relative;
   -webkit-transition: all 0.5s ease;
@@ -138,13 +144,27 @@ html {
   color: #a9d0e5;
 }
 
-#img {
-  height: 90vh;
-}
+/* navbar finished  */
+/*  slider start */
+  .slider{
+    margin-top:100px;
+  }
+  .slider h5{
+    font-size: 4rem;
 
-@media (max-width: 520px) {
- .slider .carousel-inner#immg{
-   height: 50vh;
- }
+  }
+  .slider  p{
+    font-size: 1.8rem;
+  }
+/*  slider finished */
+/* admission start */
+.admission,h1{
+  height: 6rem;
+  letter-spacing: .3rem;
+  text-shadow: 0px 0px 4px #0000ff;
+  font-size: 28px;
 }
-/*# sourceMappingURL=main.css.map */
+/* admission finished */
+/* about start */
+
+/* about finished */
