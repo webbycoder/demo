@@ -144,7 +144,7 @@ html {
 
 .homeAbout {
   background: #161aeb url("../img/ABOUT-US-BG.jpg");
-  min-height: 50rem;
+  max-height: 10rem;
   position: relative;
 }
 
@@ -162,11 +162,13 @@ html {
 }
 
 .homeAbout .home-about-text {
-  margin: 1rem auto;
+  /* margin: 1rem auto; */
   position: absolute;
+  box-sizing: content-box;
   top: 5rem;
   right: 2rem;
   height: 100%;
+  overflow: hidden;
 }
 
 .homeAbout .home-about-text h2 {
