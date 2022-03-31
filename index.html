@@ -187,13 +187,23 @@ nav{
   background-repeat: no-repeat;
   background-size: 40% 40rem,cover;
   min-height: 400px;
-  /* display: flexbox; */
-  /* flex-direction: column; */
+}
+.about h1{
+  position: relative;
+}
+.about h1::after{
+  content: '';
+  background-color: white;
+  height: .2rem;
+  width: 40rem;
+  position: absolute;
+  bottom: 2rem;
+  right: 3rem;
 }
 
 .about p {
   font-size: 1.8rem;
-  width: 50%;
+  width: 60%;
   text-align: justify;
   margin-right: 3rem;
   float: right;
