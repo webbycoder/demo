@@ -19,7 +19,7 @@ html {
 
 nav{
   /* background-color: #120f2200; */
-  background-color: #120f227c;
+  background-color: #120f22;
   font-size: 1.8rem;
   margin: 0 10px;
 }
@@ -144,27 +144,64 @@ nav{
   color: #a9d0e5;
 }
 
-/* navbar finished  */
-/*  slider start */
-  .slider{
-    margin-top:100px;
-  }
-  .slider h5{
-    font-size: 4rem;
+/* navbar finished  *//*  slider start */
+.slider {
+  margin-top: 10.7rem;
+}
 
-  }
-  .slider  p{
-    font-size: 1.8rem;
-  }
+.slider h5 {
+  font-size: 4rem;
+}
+
+.slider p {
+  font-size: 1.8rem;
+}
+
 /*  slider finished */
 /* admission start */
-.admission,h1{
+.admission, .admission h1 {
+  background-color: #09207e;
   height: 6rem;
   letter-spacing: .3rem;
-  text-shadow: 0px 0px 4px #0000ff;
-  font-size: 28px;
+  font-size: 2.8rem;
 }
+
 /* admission finished */
 /* about start */
+.about {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-image: url("img/02-CAPTAIN-AMERICA.png"), url("img/ABOUT-US-BG.jpg");
+  background-position: bottom left,top left;
+  background-repeat: no-repeat;
+  background-size: 40% 40rem,cover;
+  min-height: 400px;
+  /* display: flexbox; */
+  /* flex-direction: column; */
+}
+
+.about p {
+  font-size: 1.8rem;
+  width: 65%;
+  text-align: justify;
+  margin-right: 3rem;
+  float: right;
+  clear: both;
+}
+
+.about p button {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  font-size: 20px;
+}
+
+@media (max-width: 575px) {
+  html {
+    font-size: 55%;
+  }
+  .slider {
+    margin-top: 10.8rem;
+  }
+}
 
 /* about finished */
