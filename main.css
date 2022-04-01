@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -12,22 +12,23 @@ html {
 .outer {
   margin: 0 10px;
   -webkit-box-shadow: 0 0 1.8rem 0.2rem #120f22b7;
-          box-shadow: 0 0 1.8rem 0.2rem #120f22b7;
+  box-shadow: 0 0 1.8rem 0.2rem #120f22b7;
   /* background-color: aquamarine; */
   min-height: 2000px;
 }
 
-nav{
+nav {
   /* background-color: #120f2200; */
   background-color: #120f22;
   font-size: 1.8rem;
   margin: 0 10px;
 }
+
 /* nav::after{
-  content: '';
-  display: table;
-  clear: both;
-} */
+    content: '';
+    display: table;
+    clear: both;
+  } */
 .navbar ul li a {
   position: relative;
   -webkit-transition: all 0.5s ease;
@@ -36,7 +37,7 @@ nav{
 
 .navbar ul li a:hover {
   -webkit-transform: scale(0.91);
-          transform: scale(0.91);
+  transform: scale(0.91);
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -89,18 +90,18 @@ nav{
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
 }
 
 .navbar .socialIcon i:hover {
   -webkit-box-shadow: 0 0 1rem 0.2rem #dfe1eb inset;
-          box-shadow: 0 0 1rem 0.2rem #dfe1eb inset;
+  box-shadow: 0 0 1rem 0.2rem #dfe1eb inset;
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
   border: none;
@@ -109,7 +110,6 @@ nav{
 .navbar .socialIcon .fa {
   width: 4rem;
   height: 4rem;
-  border: 0.01rem solid white;
   border-radius: 50%;
   margin: 0.3rem;
   color: white;
@@ -118,14 +118,14 @@ nav{
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .navbar .socialIcon .fa-facebook:hover {
@@ -144,7 +144,8 @@ nav{
   color: #a9d0e5;
 }
 
-/* navbar finished  *//*  slider start */
+/* navbar finished  */
+/*  slider start */
 .slider {
   margin-top: 10.7rem;
 }
@@ -170,19 +171,31 @@ nav{
 /* about start */
 .about {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   background-image: url("img/02-CAPTAIN-AMERICA.png"), url("img/ABOUT-US-BG.jpg");
   background-position: bottom left,top left;
   background-repeat: no-repeat;
   background-size: 40% 40rem,cover;
   min-height: 400px;
-  /* display: flexbox; */
-  /* flex-direction: column; */
+}
+
+.about h1 {
+  position: relative;
+}
+
+.about h1::after {
+  content: '';
+  background-color: white;
+  height: .2rem;
+  width: 40rem;
+  position: absolute;
+  bottom: 2rem;
+  right: 3rem;
 }
 
 .about p {
   font-size: 1.8rem;
-  width: 65%;
+  width: 60%;
   text-align: justify;
   margin-right: 3rem;
   float: right;
