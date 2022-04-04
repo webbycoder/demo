@@ -1,207 +1,228 @@
 * {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-  font-size: 62.5%;
+    font-size: 62.5%;
 }
 
 .outer {
-  margin: 0 10px;
-  -webkit-box-shadow: 0 0 1.8rem 0.2rem #120f22b7;
-          box-shadow: 0 0 1.8rem 0.2rem #120f22b7;
-  /* background-color: aquamarine; */
-  min-height: 2000px;
+    margin: 0 10px;
+    -webkit-box-shadow: 0 0 1.8rem 0.2rem #120f22b7;
+    box-shadow: 0 0 1.8rem 0.2rem #120f22b7;
+    min-height: 2000px;
 }
 
-nav{
-  /* background-color: #120f2200; */
-  background-color: #120f22;
-  font-size: 1.8rem;
-  margin: 0 10px;
+nav {
+    /* background-color: #120f2200; */
+    background-color: #120f22;
+    font-size: 1.8rem;
+    margin: 0 10px;
 }
+
+
 /* nav::after{
   content: '';
   display: table;
   clear: both;
 } */
+
 .navbar ul li a {
-  position: relative;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+    position: relative;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 .navbar ul li a:hover {
-  -webkit-transform: scale(0.91);
-          transform: scale(0.91);
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 .navbar ul li a::after {
-  content: "";
-  width: 0;
-  height: 0.3rem;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: #621ffd;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+    content: "";
+    width: 0;
+    height: 0.3rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #621ffd;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 .navbar ul li .act::before {
-  content: "";
-  width: 100%;
-  height: 0.05rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #fff;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+    content: "";
+    width: 100%;
+    height: 0.05rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 .navbar ul li .act::after {
-  content: "";
-  width: 100%;
-  height: 0.05rem;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: #fff;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+    content: "";
+    width: 100%;
+    height: 0.05rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 .navbar ul li a:hover::after {
-  width: 100%;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+    width: 100%;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 .navbar .socialIcon {
-  margin-left: 5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transition: all 0.7s ease;
-  transition: all 0.7s ease;
+    margin-left: 5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
 }
 
 .navbar .socialIcon i:hover {
-  -webkit-box-shadow: 0 0 1rem 0.2rem #dfe1eb inset;
-          box-shadow: 0 0 1rem 0.2rem #dfe1eb inset;
-  -webkit-transition: all 0.7s ease;
-  transition: all 0.7s ease;
-  border: none;
+    -webkit-box-shadow: 0 0 1rem 0.2rem #dfe1eb inset;
+    box-shadow: 0 0 1rem 0.2rem #dfe1eb inset;
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+    border: none;
 }
 
 .navbar .socialIcon .fa {
-  width: 4rem;
-  height: 4rem;
-  border: 0.01rem solid white;
-  border-radius: 50%;
-  margin: 0.3rem;
-  color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    border: 0.01rem solid white;
+    border-radius: 50%;
+    margin: 0.3rem;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 .navbar .socialIcon .fa-facebook:hover {
-  color: #161aeb;
+    color: #161aeb;
 }
 
 .navbar .socialIcon .fa-instagram:hover {
-  color: #ed127c;
+    color: #ed127c;
 }
 
 .navbar .socialIcon .fa-youtube-play:hover {
-  color: red;
+    color: red;
 }
 
 .navbar .socialIcon .fa-twitter:hover {
-  color: #a9d0e5;
+    color: #a9d0e5;
 }
 
-/* navbar finished  *//*  slider start */
+
+/* navbar finished  */
+
+
+/*  slider start */
+
 .slider {
-  margin-top: 10.7rem;
+    margin-top: 10.7rem;
 }
 
 .slider h5 {
-  font-size: 4rem;
+    font-size: 4rem;
 }
 
 .slider p {
-  font-size: 1.8rem;
+    font-size: 1.8rem;
 }
+
 
 /*  slider finished */
+
+
 /* admission start */
-.admission, .admission h1 {
-  background-color: #09207e;
-  height: 6rem;
-  letter-spacing: .3rem;
-  font-size: 2.8rem;
+
+.admission,
+.admission h1 {
+    background-color: #09207e;
+    height: 6rem;
+    letter-spacing: .3rem;
+    font-size: 2.8rem;
 }
 
+
 /* admission finished */
+
+
 /* about start */
+
 .about {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background-image: url("img/02-CAPTAIN-AMERICA.png"), url("img/ABOUT-US-BG.jpg");
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    /* background-image: url("img/02-CAPTAIN-AMERICA.png"), url("img/ABOUT-US-BG.jpg");
   background-position: bottom left,top left;
   background-repeat: no-repeat;
-  background-size: 40% 40rem,cover;
-  min-height: 400px;
-  /* display: flexbox; */
-  /* flex-direction: column; */
+  background-size: 40% 40rem,cover; */
+    background-image: url('img/about-us+ironman.jpg');
+    background-size: 100%;
+    height: 80vh;
+    background-repeat: cover;
+    min-height: 400px;
+    /* display: flexbox; */
+    /* flex-direction: column; */
 }
 
 .about p {
-  font-size: 1.8rem;
-  width: 65%;
-  text-align: justify;
-  margin-right: 3rem;
-  float: right;
-  clear: both;
+    font-size: 1.8rem;
+    width: 50%;
+    text-align: justify;
+    margin-right: 3rem;
+    float: right;
+    clear: both;
 }
 
 .about p button {
-  margin-top: 1rem;
-  padding: 1rem 2rem;
-  font-size: 20px;
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    font-size: 20px;
 }
 
 @media (max-width: 575px) {
-  html {
-    font-size: 55%;
-  }
-  .slider {
-    margin-top: 10.8rem;
-  }
+    html {
+        font-size: 55%;
+    }
+    .slider {
+        margin-top: 10.8rem;
+    }
 }
+
 
 /* about finished */
