@@ -23,13 +23,6 @@ nav {
     margin: 0 10px;
 }
 
-
-/* nav::after{
-  content: '';
-  display: table;
-  clear: both;
-} */
-
 .navbar ul li a {
     position: relative;
     -webkit-transition: all 0.5s ease;
