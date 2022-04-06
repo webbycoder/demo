@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.min.css">
+  <style>
+
+
+  </style>
+  <title>BlueOrbit</title>
+</head>
+
+<body class="grbody">
+  <!-- ===============================START MENU======================================= -->
+
+  <div class="outer">
+    <header>
+      <nav class="navbar navbar-expand-md  navbar-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="img/LOGO-LANDSCAPE-WHITE.png" alt="Blue Orbit Animation Logo" style="width:20rem;">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="collapsibleNavbar">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="about.html">ABOUT US</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="courses.html">COURSES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link act" href="gallery.html">WORK PROFILE</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="contact.html">CONTACT US</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">OUR EXPERIENCE</a>
+              </li>
+              <li class="nav-item">
+                <div class="socialIcon">
+                  <i class="fa fa-facebook"></i>
+                  <i class="fa fa-instagram"></i>
+                  <i class="fa fa-twitter"></i>
+                  <i class="fa fa-youtube-play"></i>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--  navigation finished -->
+    <!-- MAIN (Center website) -->
+    <div class="grmain">
+
+      <h2>Gallery/ Portfolio</h2>
+
+      <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn" onclick="filterSelection('nature')">Web Developer</button>
+        <button class="btn" onclick="filterSelection('cars')"> Design</button>
+        <button class="btn" onclick="filterSelection('people')"> PHP</button>
+      </div>
+
+      <!-- Portfolio Gallery Grid -->
+      <div class="row">
+        <div class="column nature">
+          <div class="content">
+            <div class="img-hover">
+              <img src="img/images (2).jpg" alt="images" class="img" style="width:100%">
+              <div class="every"></div>
+            </div>
+          </div>
+        </div>
+        <div class="column nature">
+          <div class="content">
+            <div class="img-hover">
+              <img src="img/images (2).jpg" alt="images" class="img" style="width:100%">
+              <div class="every"></div>
+            </div>
+          </div>
+        </div>
+        <div class="column nature">
+          <div class="content">
+            <div class="img-hover">
+              <img src="img/images (2).jpg" alt="images" class="img" style="width:100%">
+              <div class="every"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column cars">
+          <div class="content">
+            <div class="img-hover">
+              <img src="img/images (2).jpg" alt="images" class="img" style="width:100%">
+              <div class="every"></div>
+            </div>
+          </div>
+        </div>
+        <div class="column cars">
+          <div class="content">
+            <div class="img-hover">
+              <img src="img/images (2).jpg" alt="images" class="img" style="width:100%">
+              <div class="every"></div>
+            </div>
+          </div>
+        </div>
+        <div class="column cars">
+          <div class="content">
+            <div class="img-hover">
+              <img src="img/images (2).jpg" alt="images" class="img" style="width:100%">
+              <div class="every"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column people">
+          <div class="content">
+            <div class="img-hover">
+              <img src="img/images (2).jpg" alt="images" class="img" style="width:100%">
+              <div class="every"></div>
+            </div>
+          </div>
+        </div>
+        <div class="column people">
+          <div class="content">
+            <div class="img-hover">
+              <img src="img/images (2).jpg" alt="images" class="img" style="width:100%">
+              <div class="every"></div>
+            </div>
+          </div>
+        </div>
+        <div class="column people">
+          <div class="content">
+            <div class="img-hover">
+              <img src="img/images (2).jpg" alt="images" class="img" style="width:100%">
+              <div class="every"></div>
+            </div>
+          </div>
+        </div>
+        <!-- END GRID -->
+      </div>
+
+      <!-- END MAIN -->
+    </div>
+    <!-- footer start -->
+    <div class="footer">
+      <p class="text-center text-white-50 fs-5 p-3"> &reg; all right reserved. &copy;copyright 2012-22 designed by
+        Blue Orbit Animation. $developed by Er. Sunita</p>
+    </div>
+    <!-- footer finished -->
+  </div>
+
+  <script>
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("column");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+      }
+    }
+
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+
+
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function () {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+  </script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script> -->
+
+
+</body>
+
+</html>
