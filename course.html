@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>course</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="style.min.css"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&family=Roboto:wght@900&family=Ubuntu:wght@300;700&family=Work+Sans:ital,wght@1,500&display=swap');
+
+        /* ***************************** */
+
+        html {
+            font-size: 62.5%
+        }
+
+        .outer {
+            margin: 0 10px;
+            -webkit-box-shadow: 0 0 1.8rem .2rem #120f22b7;
+            box-shadow: 0 0 1.8rem .2rem #120f22b7
+        }
+
+        nav {
+            background-color: #120f22;
+            font-size: 1.8rem;
+            margin: 0 10px
+        }
+
+        nav li {
+            margin-top: 3rem
+        }
+
+        .navbar ul li a {
+            position: relative;
+            -webkit-transition: all .5s ease;
+            transition: all .5s ease
+        }
+
+        .navbar ul li a:hover {
+            -webkit-transform: scale(.91);
+            transform: scale(.91);
+            -webkit-transition: all .5s ease;
+            transition: all .5s ease
+        }
+
+        .navbar ul li a::after {
+            content: "";
+            width: 0;
+            height: .3rem;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: #621ffd;
+            -webkit-transition: all .5s ease;
+            transition: all .5s ease
+        }
+
+        .navbar ul li .act::before {
+            content: "";
+            width: 100%;
+            height: .05rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+            -webkit-transition: all .5s ease;
+            transition: all .5s ease
+        }
+
+        .navbar ul li .act::after {
+            content: "";
+            width: 100%;
+            height: .05rem;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: #fff;
+            -webkit-transition: all .5s ease;
+            transition: all .5s ease
+        }
+
+        .navbar ul li a:hover::after {
+            width: 100%;
+            -webkit-transition: all .5s ease;
+            transition: all .5s ease
+        }
+
+        .navbar .socialIcon {
+            margin-left: 5rem;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-transition: all .7s ease;
+            transition: all .7s ease
+        }
+
+        .navbar .socialIcon i:hover {
+            -webkit-box-shadow: 0 0 1rem .2rem #dfe1eb inset;
+            box-shadow: 0 0 1rem .2rem #dfe1eb inset;
+            -webkit-transition: all .7s ease;
+            transition: all .7s ease;
+            border: none
+        }
+
+        .navbar .socialIcon .fa {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            margin: .3rem;
+            color: #fff;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center
+        }
+
+        .navbar .socialIcon .fa-facebook:hover {
+            color: #161aeb
+        }
+
+        .navbar .socialIcon .fa-instagram:hover {
+            color: #ed127c
+        }
+
+        .navbar .socialIcon .fa-youtube-play:hover {
+            color: red
+        }
+
+        .navbar .socialIcon .fa-twitter:hover {
+            color: #a9d0e5
+        }
+
+        /* *********************************** */
+
+
+        .flip-card {
+            background-color: transparent;
+            /* width: 300px; */
+            width: 28.8rem;
+            height: 36.8rem;
+            /* height: 300px; */
+            perspective: 1000px;
+            font-size: 1.9rem;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            opacity: 0.8;
+            border-radius: 20px;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .flip-card-front {
+            background-color: #bbb;
+            color: black;
+        }
+
+        .flip-card-back {
+            /* background-color: #2980b9; */
+            background-color: #0b98f7;
+            box-shadow: 2px 5px 5px 5px rgba(243, 239, 240, 0.973);
+            color: white;
+            /* font-family: 'Roboto', sans-serif; */
+            font-family: 'PT Sans', sans-serif;
+            transform: rotateY(180deg);
+        }
+
+        #courseimg {
+            background: url(img/COURSES-BG.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            /* height: 1450px; */
+        }
+
+        h2 {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 2.9rem;
+            display: block;
+        }
+
+        a,
+        h5 {
+            color: #064780;
+            text-decoration: none;
+            font-size: 2.2rem;
+        }
+
+        .coursepage {
+            margin-top: 10.8rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <!-- nav bar start -->
+        <header>
+            <nav class="navbar navbar-expand-md  navbar-dark fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="img/LOGO-LANDSCAPE-WHITE.png" alt="Blue Orbit Animation Logo" style="width:20rem;">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse " id="collapsibleNavbar">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.html">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="about.html">ABOUT US</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link act" href="course.html">COURSES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="gallery.html">WORK PROFILE</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="contact.html">CONTACT US</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">OUR EXPERIENCE</a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="socialIcon">
+                                    <i class="fa fa-facebook"></i>
+                                    <i class="fa fa-instagram"></i>
+                                    <i class="fa fa-twitter"></i>
+                                    <i class="fa fa-youtube-play"></i>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- nav bar finished -->
+        <div class="coursepage">
+
+            <h2 class="fw-bolder h1 text-center p-3" style="color: #044daf;font-size: 4.0rem;">Course</h2>
+            <div class="container-fluid d-flex justify-content-around align-content-center" id="courseimg">
+                <hr>
+                <div class="row mx-auto p-4 ">
+                    <div class="col-md-6 col-lg-4 col-sm-12 mb-5">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="img/WEB-DESIGN-&-DEV.png" alt="" style="width:300px;height:300px;">
+                                    <h5>Website Design and development</h5>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h2>Website Design and development</h2>
+                                    <hr>
+                                    <p>Website is the face of any brand and today each and every brand needs
+                                        it. So Our industry experts will be providing you specialization in each and
+                                        every
+                                        layer
+                                        of the software and technologies involved in the course.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-sm-12 mb-5">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="img/GRAPHIC-DESIGN.png" alt="" style="width:300px;height:300px;">
+                                    <h5>Graphic Designing</h5>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h2>Graphic Designing</h2>
+                                    <p>Graphic designing is a course which offers you an innovative and attractive way
+                                        to
+                                        communicate your messages, Ideas, thoughts and opinions to the audience. Now
+                                        these
+                                        work skills come to you when you work in that particular environment and we are
+                                        up
+                                        to help you with this.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-sm-12 mb-5">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="img/WEB-DESIGN-&-DEV.png" alt="" style="width:300px;height:300px;">
+                                    <h5>SEO</h5>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h2>SEO</h2>
+                                    <p> Search engine optimization is currently the one of the most demanding
+                                        courses and all of this is due to the
+                                        huge digital transformation that took over in the recent years."These
+                                        optimizations are
+                                        done to increase the
+                                        traffic on your content and needs advise of expertise on each and every step, to
+                                        understand the algorithm
+                                        behind the search engines.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-sm-12 mb-5">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="img/3D-ANIMATION.png" alt="" style="width:300px;height:300px;">
+                                    <h5>3D-ANIMATION</h5>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h2>3D-ANIMATION</h2>
+                                    <p>This is a three dimensional space where each and every thing may or may not work
+                                        According to
+                                        the principles of real life. For instance, we can say that they could even work
+                                        in a
+                                        much
+                                        more better manner and all you need for that is direction.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-sm-12 mb-5">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="img/VFX.png" alt="" style="width:300px;height:300px;">
+                                    <h5>Vfx(Visual Effects)</h5>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h2>Vfx(Visual Effects)</h2>
+                                    <p>"Bringing ideas alive" is a phrase I can definitely use while explaining VFX. As,
+                                        VFX is
+                                        a
+                                        pure mixture of reality as well as imagination. Scenes in the film or other
+                                        videos which
+                                        aren't possible live and to make your scenes much more realistic start your
+                                        journey with
+                                        our
+                                        Industry experts.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-sm-12 mb-5">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="img/MULTIMEDIA.png" alt="" style="width:300px;height:300px;">
+                                    <h5>Multimedia</h5>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h2>Multimedia</h2>
+                                    <p> Search engine optimization is currently the one of the most demanding
+                                        courses and all of this is due to the
+                                        huge digital transformation that took over in the recent years."These
+                                        optimizations are
+                                        done to increase the
+                                        traffic on your content and needs advise of expertise on each and every step, to
+                                        understand the algorithm
+                                        behind the search engines.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-sm-12 mb-5">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="img/WEB-DESIGN-&-DEV.png" alt="" style="width:300px;height:300px;">
+                                    <h5>Motion Graphic</h5>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h2>Motion Graphic</h2>
+                                    <p>Motion is something that drives people crazy and giving motion to graphics is
+                                        equal to
+                                        excellence in creativity. So are you ready to develp new forms and expressions
+                                        to rock
+                                        the
+                                        show in the world of friction?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-sm-12 mb-5">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="img/UI-UX.png" alt="" style="width:300px;height:300px;">
+                                    <h5>UI/UX DESIGN</h5>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h2>UI/UX DESIGN</h2>
+                                    <p>UI/Ux Design is something which plays a major role in this ever- changing world.
+                                        It is
+                                        the
+                                        one with which the user deals while they interact with the digital service you
+                                        are
+                                        providing
+                                        them.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-sm-12 mb-5">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="img/FILM-MAKING-&-DIRECTION.png" alt="" style="width:300px;height:300px;">
+                                    <h5>Film making and Direction </h5>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h2>Film making and Direction </h2>
+                                    <p> Film making and Direction is an art of story telling with the help of film
+                                        making
+                                        theories
+                                        and appropriate knowledge of camera handing and you can get all of this in this
+                                        course.
+                                        You
+                                        will even get to watch all live projects going onborad.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-sm-12 mb-5">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="img/WEB-DESIGN-&-DEV.png" alt="" style="width:300px;height:300px;">
+                                    <h5>Unleash your gamer vision</h5>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h2>Unleash your gamer vision</h2>
+                                    <p>Gaming is all about the combination between technology, fun, creativity and hype.
+                                        Joining
+                                        this sector need to have a skilled mindset. With our dynamic course get in touch
+                                        with
+                                        the
+                                        industry Professionals directly to stay updated on changing attitude of players
+                                        and the
+                                        potential impact of designing in it.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-sm-12 mb-5">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="img/GRAPHIC-DESIGN.png" alt="" style="width:300px;height:300px;">
+                                    <h5>Architectural and visualization </h5></a>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h2>Architectural and visualization </h2>
+                                    <p>Architectural and 3D visualization is a course which needs proper optimization.
+                                        Thus our
+                                        Industry Professionals Will be starting the course with the basic modeling
+                                        techniques
+                                        and
+                                        will be taking it over till the final adjustments Step by step.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-sm-12 mb-5">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="img/WEB-DESIGN-&-DEV.png" alt="" style="width:300px;height:300px;">
+                                    <h5>Broadcast and media</h5>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h2>Broadcast and media</h2>
+                                    <p> Search engine optimization is currently the one of the most demanding
+                                        courses and all of this is due to the
+                                        huge digital transformation that took over in the recent years."These
+                                        optimizations are
+                                        done to increase the
+                                        traffic on your content and needs advise of expertise on each and every step, to
+                                        understand the algorithm
+                                        behind the search engines.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- =======================end course================= -->
+
+    <script src="bootstrap.min.js"></script>
+</body>
+
+</html>
